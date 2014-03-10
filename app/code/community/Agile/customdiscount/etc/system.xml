@@ -1,0 +1,80 @@
+<config>
+    <sections>
+        <checkout translate="label" module="customdiscount">
+            
+           <!-- <class>separator-top</class>
+            <label>New Test Section</label>
+            <tab>customer</tab>
+            <sort_order>130</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store> -->
+  
+            
+            
+            <groups>
+                <cheapest_free translate="label">
+                    <label>Enable Custom Discount (Buy X Get Y) in Checkout Page</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>101</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <isactive translate="label">
+                            <label> Enable Cheapest free</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                        </isactive>
+                         <buyminimum translate="label comment">
+                            <label>Buy X Products</label>
+                            <comment>Buy X Product</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-per-page-value-list</validate>
+                            <!--<source_model>adminhtml/system_config_source_catalog_gridPerPage</source_model>-->
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </buyminimum>
+                        
+                        <getfree translate="label comment">
+                            <label>Get Free Products</label>
+                            <comment>Free Y Products</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-per-page-value-list</validate>
+                            <!--<source_model>adminhtml/system_config_source_catalog_gridPerPage</source_model>-->
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </getfree>
+                        
+                        <discategory translate="label comment">
+                            <label>Category ID</label>
+                            <comment>Enter Category id, For one category only</comment>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-per-page-value-list</validate>
+                            <!--<source_model>adminhtml/system_config_source_catalog_gridPerPage</source_model>-->
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </discategory>
+                        
+                        
+                        
+                    </fields>
+                </cheapest_free>
+
+
+            </groups>
+        </checkout>
+    </sections>
+
+
+</config>
