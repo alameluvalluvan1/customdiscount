@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Agile_Customdiscount>
+            <version>1.0.10</version>
+        </Agile_Customdiscount>
+    </modules>
+    
+    
+    <global>
+ 
+        <events>
+        <!-- Création éventuelle du lien de parrainage lors de la commande -->
+            <sales_quote_collect_totals_after>
+                <observers>
+                    <set_custom_discount_suagrcode>
+                        <type>singleton</type>
+                        <class>Agile_Customdiscount_Model_Observer</class>
+                        <method>setDiscount</method>
+                    </set_custom_discount_suagrcode>
+                </observers>
+            </sales_quote_collect_totals_after>             
+   
+  </events>
+        
+    </global>
+
+   
+</config>
